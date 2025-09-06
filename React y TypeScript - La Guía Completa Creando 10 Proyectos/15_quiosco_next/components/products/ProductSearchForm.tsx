@@ -5,7 +5,7 @@ import { toast } from "react-toastify"
 
 export default function ProductSearchForm() {
   const router = useRouter()
-  
+
   const handleSearchForm = (formData: FormData) => {
     const data = {
       search: formData.get('search')
@@ -28,7 +28,7 @@ export default function ProductSearchForm() {
       <input
         type="text"
         placeholder="Buscar Producto"
-        className="p-2 placeholder-gray-400 w-full"
+        className="p-2 placeholder-gray-400 w-full bg-white"
         name="search"
       />
       <input
