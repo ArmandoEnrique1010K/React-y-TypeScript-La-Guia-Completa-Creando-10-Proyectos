@@ -1,10 +1,10 @@
 // Objetos
 
 const producto = {
-  nombre: "Tablet",
-  precio: 300,
-  disponible: false
-}
+    nombre: "Tablet",
+    precio: 300,
+    disponible: false,
+};
 
 // console.log(producto)
 // console.table(producto)
@@ -24,10 +24,10 @@ const producto = {
 // console.log(disponible)
 
 // Object Literal Enhacement
-const autenticado = true
-const usuario = "Juan"
+const autenticado = true;
+const usuario = "Juan";
 const nuevoObjeto = {
-  autenticado,
-  usuario
-}
-console.log(nuevoObjeto)
+    autenticado,
+    usuario,
+};
+console.log(nuevoObjeto);

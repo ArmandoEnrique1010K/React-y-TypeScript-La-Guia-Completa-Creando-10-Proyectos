@@ -1,5 +1,5 @@
-const cliente = "Juan"
-cliente = 30
+const cliente = "Juan";
+cliente = 30;
 
-const precio = 1000
-console.log(precio)
+const precio = 1000;
+console.log(precio);

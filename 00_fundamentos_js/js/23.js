@@ -1,4 +1,4 @@
 // Evaluación de corto circuito
 
-const auth = true
-auth && console.log('Usuario Autenticado') 
+const auth = true;
+auth && console.log("Usuario Autenticado");

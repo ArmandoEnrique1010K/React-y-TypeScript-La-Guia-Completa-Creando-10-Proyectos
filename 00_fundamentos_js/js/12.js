@@ -1,4 +1,12 @@
-const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Node.js', 'Nest.js', 'TypeScript']
+const tecnologias = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React.js",
+    "Node.js",
+    "Nest.js",
+    "TypeScript",
+];
 
 // for(let i = 0; i < tecnologias.length; i++) {
 //   console.log(tecnologias[i] )
@@ -11,12 +19,12 @@ const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Node.js', 'Nest.j
 
 // map
 const arrayMap = tecnologias.map(function (tech) {
-  return tech
-})
+    return tech;
+});
 
 // for ... of
 for (let tech of tecnologias) {
-  console.log(tech)
+    console.log(tech);
 }
 
 // console.log(arrayMap)

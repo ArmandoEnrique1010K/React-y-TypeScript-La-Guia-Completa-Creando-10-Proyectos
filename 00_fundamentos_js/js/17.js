@@ -1,5 +1,5 @@
-const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Node.js']
-const numeros = [10, 20, 30]
+const tecnologias = ["HTML", "CSS", "JavaScript", "React.js", "Node.js"];
+const numeros = [10, 20, 30];
 
 // Filter
 // const nuevoArray = tecnologias.filter((tech) => tech !== 'HTML' )
@@ -20,4 +20,4 @@ const numeros = [10, 20, 30]
 // Reduce - Retorna un acumulado del total
 // const resultado = numeros.reduce( (total, numero) =>  total + numero, 0)
 
-console.log(resultado)
+console.log(resultado);

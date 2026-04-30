@@ -1,7 +1,7 @@
 // Tipos de Dato
 
 // Undefined
-// let cliente 
+// let cliente
 // console.log(cliente)
 // console.log(typeof cliente)
 

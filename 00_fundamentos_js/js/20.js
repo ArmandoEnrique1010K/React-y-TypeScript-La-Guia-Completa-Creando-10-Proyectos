@@ -1,6 +1,6 @@
-const saldo = 1000
-const pagar = 1200
-const tarjeta = false
+const saldo = 1000;
+const pagar = 1200;
+const tarjeta = false;
 
 /**
  * Logical Or y Logical And
@@ -9,7 +9,7 @@ const tarjeta = false
  */
 
 if (saldo > pagar || tarjeta) {
-  console.log('Puedes Pagar')
+    console.log("Puedes Pagar");
 } else {
-  console.log('No no puedes pagar')
+    console.log("No no puedes pagar");
 }
