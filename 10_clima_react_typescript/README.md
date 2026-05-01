@@ -1,4 +1,4 @@
-# Consulta del clima con React, TypeScript, Axios y Zod
+# Consulta del clima con React, TypeScript, modulos CSS, Axios y Zod
 
 Autor: Juan Pablo De La Torre
 

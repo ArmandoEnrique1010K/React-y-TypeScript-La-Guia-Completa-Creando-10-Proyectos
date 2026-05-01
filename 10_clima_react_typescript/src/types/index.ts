@@ -1,9 +1,9 @@
 export type SearchType = {
-  city: string
-  country: string
-}
+    city: string;
+    country: string;
+};
 
 export type Country = {
-  code: string
-  name: string
-}
+    code: string;
+    name: string;
+};

@@ -62,7 +62,7 @@ export default function ActivityList({
                                         })
                                     }
                                 >
-                                    <PencilSquareIcon className="h-8 w-8 text-gray-800" />
+                                    <PencilSquareIcon className="h-8 w-8 text-gray-800 cursor-pointer" />
                                 </button>
 
                                 <button
@@ -73,7 +73,7 @@ export default function ActivityList({
                                         })
                                     }
                                 >
-                                    <XCircleIcon className="h-8 w-8 text-red-500" />
+                                    <XCircleIcon className="h-8 w-8 text-red-500 cursor-pointer" />
                                 </button>
                             </div>
                         </div>

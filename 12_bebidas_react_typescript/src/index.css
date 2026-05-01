@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 @layer utilities {
-  .animate-blink {
-    animation: blink 1s ease-in-out infinite;
-  }
+    .animate-blink {
+        animation: blink 1s ease-in-out infinite;
+    }
 
-  .bg-header {
-    background-image: url('/bg.jpg');
-  }
-};
+    .bg-header {
+        background-image: url("/bg.jpg");
+    }
+}
 
 @keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-};
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}

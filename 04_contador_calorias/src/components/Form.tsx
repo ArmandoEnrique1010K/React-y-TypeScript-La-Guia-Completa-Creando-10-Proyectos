@@ -62,7 +62,7 @@ export default function Form({ dispatch, state }: FormProps) {
                     Categoría:
                 </label>
                 <select
-                    className="border border-slate-300 p-2 rounded-lg w-full bg-white"
+                    className="border border-slate-300 p-2 rounded-lg w-full bg-white cursor-pointer"
                     id="category"
                     value={activity.category}
                     onChange={handleChange}

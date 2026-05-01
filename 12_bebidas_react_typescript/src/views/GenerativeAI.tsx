@@ -29,7 +29,10 @@ export default function GenerativeAI() {
             <h1 className="text-6xl font-extrabold">Generar Receta con IA</h1>
 
             <div className="max-w-4xl mx-auto">
-                <form onSubmit={handleSubmit} className="flex flex-col space-y-3 py-10">
+                <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col space-y-3 py-10"
+                >
                     <div className="relative">
                         <input
                             name="prompt"
@@ -40,8 +43,11 @@ export default function GenerativeAI() {
                         <button
                             type="submit"
                             aria-label="Enviar"
-                            className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2 ${isGenerating ? "cursor-not-allowed opacity-50" : ""
-                                }`}
+                            className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2 ${
+                                isGenerating
+                                    ? "cursor-not-allowed opacity-50"
+                                    : ""
+                            }`}
                             disabled={isGenerating}
                         >
                             <svg

@@ -33,15 +33,21 @@ export default function TipPercentageForm({
             <form>
                 {tipOptions.map((tipOption) => (
                     <div key={tipOption.id} className="flex gap-2">
-                        <label htmlFor={tipOption.id}>{tipOption.label}</label>
                         <input
                             id={tipOption.id}
+                            className="cursor-pointer"
                             type="radio"
                             name="tip"
                             value={tipOption.value}
                             onChange={(e) => setTip(+e.target.value)}
                             checked={tipOption.value === tip}
                         />
+                        <label
+                            className="cursor-pointer"
+                            htmlFor={tipOption.id}
+                        >
+                            {tipOption.label}
+                        </label>
                     </div>
                 ))}
             </form>
