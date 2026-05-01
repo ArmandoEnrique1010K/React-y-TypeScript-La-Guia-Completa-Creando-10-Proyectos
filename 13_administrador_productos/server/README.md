@@ -1,4 +1,4 @@
-# API REST de un CRUD de productos con Nodejs, TypeScript, Express, PostgreSQL, Sequelize, Express Validator, Jest y Swagger
+# API REST de un CRUD de productos con Nodejs, TypeScript, Express, PostgreSQL, Sequelize, Express Validator, Jest y Swagger (incluye pruebas con Jest)
 
 Autor: Juan Pablo De La Torre
 

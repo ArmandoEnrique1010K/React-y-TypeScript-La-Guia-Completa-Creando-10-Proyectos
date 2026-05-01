@@ -1,4 +1,4 @@
-# Aplicación de un CRUD de productos con React, TypeScript, React Router, Axios y Valibot
+# Aplicación de un CRUD de productos con React, TypeScript, React Router, Axios y Valibot (incluye Loader y Actions de React Router)
 
 Autor: Juan Pablo De La Torre
 
