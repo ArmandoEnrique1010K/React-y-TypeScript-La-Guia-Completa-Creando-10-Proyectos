@@ -2,9 +2,13 @@
 
 Autor: Juan Pablo De La Torre
 
+Última actualización: Mayo del 2026
+
+[Proyecto desplegado en Netlify](https://thriving-baklava-affc4e.netlify.app/)
+
 ## Variables de entorno
 
-- `VITE_OPENROUTER_KEY` = Se requiere un API KEY para que funcione la IA generativa integrada de Open Router.
+`VITE_OPENROUTER_KEY` = Se requiere un API KEY para conectar el modelo LLM obtenido desde Open Router para utilizar la IA Generativa
 
 ## Advertencia
 

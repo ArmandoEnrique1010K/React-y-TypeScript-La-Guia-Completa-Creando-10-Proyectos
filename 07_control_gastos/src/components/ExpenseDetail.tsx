@@ -61,7 +61,8 @@ export default function ExpenseDetail({ expense }: ExpenseDetailProps) {
                 leadingActions={leadingActions()}
                 trailingActions={trailingActions()}
             >
-                <div className="bg-white shadow-lg p-5 w-full border-b border-gray-200 flex gap-5 items-center">
+                {/* select-none evita que el usuario pueda seleccionar texto */}
+                <div className="bg-white shadow-lg p-5 w-full border-b border-gray-200 flex gap-5 items-center cursor-grab select-none">
                     <div>
                         <img
                             src={`/icono_${categoryInfo.icon}.svg`}

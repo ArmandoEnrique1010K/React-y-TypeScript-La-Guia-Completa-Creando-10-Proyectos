@@ -4,4 +4,4 @@ Autor: Juan Pablo De La Torre
 
 Última actualización: Mayo del 2026
 
-[Proyecto desplegado en Netlify]()
+[Proyecto desplegado en Netlify](https://vermillion-profiterole-31ae19.netlify.app/)

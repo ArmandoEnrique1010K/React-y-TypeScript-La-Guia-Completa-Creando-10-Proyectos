@@ -4,4 +4,4 @@ Autor: Juan Pablo De La Torre
 
 Última actualización: Mayo del 2026
 
-[Proyecto desplegado en Netlify](http:www.google.com/)
+[Proyecto desplegado en Netlify](https://bucolic-mandazi-0c406e.netlify.app/)

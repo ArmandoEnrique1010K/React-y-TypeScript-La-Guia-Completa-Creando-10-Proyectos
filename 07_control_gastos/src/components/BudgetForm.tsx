@@ -30,7 +30,7 @@ export default function BudgetForm() {
                 <input
                     id="budget"
                     type="number"
-                    className="w-full bg-white border bordger-gray-200 p-2"
+                    className="w-full bg-white border border-gray-200 p-2"
                     placeholder="Define tu presupuesto"
                     name="budget"
                     value={budget}

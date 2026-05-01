@@ -1,4 +1,6 @@
 import { useAppStore } from "../stores/useAppStore";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function GenerativeAI() {
     const showNotification = useAppStore((state) => state.showNotification);
@@ -71,7 +73,9 @@ export default function GenerativeAI() {
                 {isGenerating && (
                     <p className="text-center animate-blink">Generando...</p>
                 )}
-                <div className="py-10 whitespace-pre-wrap">{recipe}</div>
+                <div className="py-10 whitespace-pre-wrap">
+                    <Markdown remarkPlugins={[remarkGfm]}>{recipe}</Markdown>
+                </div>
             </div>
         </>
     );
