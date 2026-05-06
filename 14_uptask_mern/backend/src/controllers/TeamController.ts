@@ -6,8 +6,15 @@ export class TeamMemberController {
     static findMemberByEmail = async (req: Request, res: Response) => {
         const { email } = req.body;
 
-        // Find user
-        const user = await User.findOne({ email }).select("id email name");
+        // Obtiene el usuario que ha iniciado sesion (el administrador)
+        const admin = req.user;
+
+        // Buscar al usuario, excepto el usuario que ha iniciado sesion
+        const user = await User.findOne({
+            email,
+            // Excluir al usuario que ha iniciado sesion
+            _id: { $ne: req.user._id },
+        }).select("id email name");
         if (!user) {
             const error = new Error("Usuario No Encontrado");
             return res.status(404).json({ error: error.message });

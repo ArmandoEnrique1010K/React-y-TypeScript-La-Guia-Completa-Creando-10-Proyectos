@@ -107,8 +107,13 @@ export class AuthController {
             // Guardar el token en la cookie
             res.cookie("token", token, {
                 httpOnly: true, // no accesible desde JS (evita XSS)
-                secure: process.env.NODE_ENV === "production", // solo HTTPS en prod
-                sameSite: "strict", // protección CSRF básica
+                // secure: process.env.NODE_ENV === "production", // solo HTTPS en prod
+                // sameSite: "lax", // protección CSRF básica
+
+                // En entorno de producción se coloca lo siguiente
+                secure: true,
+                sameSite: "none", // CROSS-SITE, dominios distintos
+
                 maxAge: 1000 * 60 * 60 * 24 * 30, // 30 días
             });
 
