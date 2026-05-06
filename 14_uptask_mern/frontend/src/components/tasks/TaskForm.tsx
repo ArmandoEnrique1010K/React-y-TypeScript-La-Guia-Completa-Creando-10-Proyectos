@@ -10,7 +10,7 @@ type TaskFormProps = {
 export default function TaskForm({ errors, register }: TaskFormProps) {
     return (
         <>
-            <div className="flex flex-col gap-5">
+            <div className="mb-6 space-y-5 flex flex-col">
                 <label className="font-normal text-2xl" htmlFor="name">
                     Nombre de la tarea
                 </label>
@@ -28,7 +28,7 @@ export default function TaskForm({ errors, register }: TaskFormProps) {
                 )}
             </div>
 
-            <div className="flex flex-col gap-5">
+            <div className="mb-6 space-y-5 flex flex-col">
                 <label className="font-normal text-2xl" htmlFor="description">
                     Descripción de la tarea
                 </label>

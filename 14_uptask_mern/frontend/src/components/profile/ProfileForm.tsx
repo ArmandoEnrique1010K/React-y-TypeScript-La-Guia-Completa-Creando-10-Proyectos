@@ -41,7 +41,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
                     className=" mt-14 space-y-5  bg-white shadow-lg p-10 rounded-l"
                     noValidate
                 >
-                    <div className="mb-5 space-y-3">
+                    <div className="mb-6 space-y-3 flex flex-col">
                         <label
                             className="text-sm uppercase font-bold"
                             htmlFor="name"
@@ -62,7 +62,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
                         )}
                     </div>
 
-                    <div className="mb-5 space-y-3">
+                    <div className="mb-6 space-y-3 flex flex-col">
                         <label
                             className="text-sm uppercase font-bold"
                             htmlFor="password"
@@ -89,7 +89,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
                     <input
                         type="submit"
                         value="Guardar Cambios"
-                        className="bg-fuchsia-600 w-full p-3 text-white uppercase font-bold hover:bg-fuchsia-700 cursor-pointer transition-colors"
+                        className="bg-fuchsia-600 w-full p-3 text-white uppercase font-bold hover:bg-fuchsia-700 cursor-pointer transition-colors mt-4"
                     />
                 </form>
             </div>

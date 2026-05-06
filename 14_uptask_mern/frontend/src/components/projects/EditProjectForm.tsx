@@ -56,7 +56,7 @@ export default function EditProjectForm({
         <>
             <div className="max-w-3xl mx-auto">
                 <h1 className="text-5xl font-black">Editar Proyecto</h1>
-                <p className="text-2xl font-light text-gray-500 mt-5">
+                <p className="text-2xl font-light text-gray-500 py-5">
                     Llena el siguiente formulario para editar el proyecto
                 </p>
                 <nav className="my-5 ">

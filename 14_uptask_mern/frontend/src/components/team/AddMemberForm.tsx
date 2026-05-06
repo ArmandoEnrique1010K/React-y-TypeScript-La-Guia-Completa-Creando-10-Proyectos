@@ -40,7 +40,7 @@ export default function AddMemberForm() {
                 onSubmit={handleSubmit(handleSearchUser)}
                 noValidate
             >
-                <div className="flex flex-col gap-3">
+                <div className="mb-6 space-y-5 flex flex-col">
                     <label className="font-normal text-2xl" htmlFor="name">
                         E-mail de Usuario
                     </label>
@@ -67,7 +67,7 @@ export default function AddMemberForm() {
                     value="Buscar Usuario"
                 />
             </form>
-            <div className="mt-10">
+            <div className="mt-12">
                 {mutation.isPending && (
                     <p className="text-center">Cargando...</p>
                 )}

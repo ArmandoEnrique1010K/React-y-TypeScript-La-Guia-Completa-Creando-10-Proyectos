@@ -108,7 +108,7 @@ export default function DashboardView() {
                                                 <MenuItem>
                                                     <Link
                                                         to={`/projects/${project._id}`}
-                                                        className="block px-3 py-1 text-sm leading-6 text-gray-900"
+                                                        className="block px-3 py-1 text-sm leading-6 text-gray-600 hover:text-gray-800"
                                                     >
                                                         Ver Proyecto
                                                     </Link>
@@ -121,7 +121,7 @@ export default function DashboardView() {
                                                         <MenuItem>
                                                             <Link
                                                                 to={`/projects/${project._id}/edit`}
-                                                                className="block px-3 py-1 text-sm leading-6 text-gray-900"
+                                                                className="block px-3 py-1 text-sm leading-6 text-gray-600 hover:text-gray-800"
                                                             >
                                                                 Editar Proyecto
                                                             </Link>
@@ -129,7 +129,7 @@ export default function DashboardView() {
                                                         <MenuItem>
                                                             <button
                                                                 type="button"
-                                                                className="block px-3 py-1 text-sm leading-6 text-red-500"
+                                                                className="block px-3 py-1 text-sm leading-6 text-red-500 hover:text-red-700"
                                                                 onClick={() =>
                                                                     navigate(
                                                                         location.pathname +

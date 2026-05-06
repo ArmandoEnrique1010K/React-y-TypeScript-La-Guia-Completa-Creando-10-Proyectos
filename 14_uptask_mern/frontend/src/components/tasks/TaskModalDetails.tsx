@@ -105,7 +105,7 @@ export default function TaskModalDetails() {
                                         >
                                             {data.name}
                                         </Dialog.Title>
-                                        <p className="text-lg text-slate-500 mb-2">
+                                        <p className="text-lg text-slate-500 mb-6">
                                             Descripción: {data.description}
                                         </p>
                                         {data.completedBy.length ? (
@@ -113,7 +113,7 @@ export default function TaskModalDetails() {
                                                 <p className="font-bold text-2xl text-slate-600 my-5">
                                                     Historial de Cambios
                                                 </p>
-                                                <ul className="list-decimal list-inside">
+                                                <ul className="list-decimal list-inside pb-8">
                                                     {data.completedBy.map(
                                                         (activityLog) => (
                                                             <li
@@ -141,9 +141,9 @@ export default function TaskModalDetails() {
                                                 </ul>
                                             </>
                                         ) : null}
-                                        <div className="my-5 space-y-3">
+                                        <div className="mb-6 space-y-3 flex flex-col">
                                             <label className="font-bold">
-                                                Estado Actual:
+                                                Estado Actual
                                             </label>
                                             <select
                                                 className="w-full p-3 bg-white border border-gray-300"

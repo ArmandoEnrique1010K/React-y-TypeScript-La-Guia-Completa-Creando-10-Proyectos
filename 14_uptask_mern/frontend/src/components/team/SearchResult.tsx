@@ -40,7 +40,7 @@ export default function SearchResult({ user, reset }: SearchResultProps) {
 
     return (
         <>
-            <p className="mt-10 text-center font-bold">Resultado:</p>
+            <p className="mt-10 text-center font-bold text-lg">Resultado</p>
             <div className="flex justify-between items-center">
                 <p>{user.name}</p>
                 <button

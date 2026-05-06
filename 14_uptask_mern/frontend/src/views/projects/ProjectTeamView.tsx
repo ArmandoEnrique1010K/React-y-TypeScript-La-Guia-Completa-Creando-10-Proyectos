@@ -106,7 +106,7 @@ export default function ProjectTeamView() {
                                                 <Menu.Item>
                                                     <button
                                                         type="button"
-                                                        className="block px-3 py-1 text-sm leading-6 text-red-500"
+                                                        className="block px-3 py-1 text-sm leading-6 text-red-500 hover:text-red-700 cursor-pointer w-full text-left"
                                                         onClick={() =>
                                                             mutate({
                                                                 projectId,

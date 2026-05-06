@@ -57,7 +57,7 @@ export default function NewPasswordToken({
             <nav className="mt-10 flex flex-col space-y-4">
                 <Link
                     to="/auth/forgot-password"
-                    className="text-center text-gray-300 font-normal"
+                    className="text-center text-fuchsia-500 hover:text-fuchsia-600 font-normal"
                 >
                     Solicitar un nuevo Código
                 </Link>

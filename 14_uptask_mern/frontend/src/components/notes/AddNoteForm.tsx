@@ -47,7 +47,7 @@ export default function AddNoteForm() {
             className="space-y-3"
             noValidate
         >
-            <div className="flex flex-col gap-2">
+            <div className="mb-6 space-y-3 flex flex-col">
                 <label className="font-bold" htmlFor="content">
                     Crear Nota
                 </label>
@@ -68,7 +68,7 @@ export default function AddNoteForm() {
             <input
                 type="submit"
                 value="Crear Nota"
-                className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-2 text-white font-black cursor-pointer"
+                className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-2 text-white font-black cursor-pointer mt-4"
             />
         </form>
     );
