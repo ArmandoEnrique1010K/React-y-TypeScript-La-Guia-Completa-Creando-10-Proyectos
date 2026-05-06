@@ -1,38 +1,66 @@
-import { Request, Response, NextFunction } from "express"
-import jwt from "jsonwebtoken"
-import User, { IUser } from "../models/User"
+import { Request, Response, NextFunction } from "express";
+import jwt from "jsonwebtoken";
+import User, { IUser } from "../models/User";
 
 declare global {
-  namespace Express {
-    interface Request {
-      user?: IUser
+    namespace Express {
+        interface Request {
+            user?: IUser;
+        }
     }
-  }
 }
 
-export const authenticate = async (req: Request, res: Response, next: NextFunction) => {
-  const bearer = req.headers.authorization
-  if (!bearer) {
-    const error = new Error("No Autorizado")
-    return res.status(401).json({ error: error.message })
-  }
+export const authenticate = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+) => {
+    // No recomendado obtener el JWT desde los headers
+    // const bearer = req.headers.authorization;
 
-  const [, token] = bearer.split(" ")
+    // if (!bearer) {
+    //     const error = new Error("No Autorizado");
+    //     return res.status(401).json({ error: error.message });
+    // }
 
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET)
+    // const [, token] = bearer.split(" ");
+    const token = req.cookies.token;
 
-    if (typeof decoded === "object" && decoded.id) {
-      const user = await User.findById(decoded.id).select("_id name email")
-      if (user) {
-        req.user = user
-        next()
-      } else {
-        res.status(500).json({ error: "Token No Válido" })
-      }
+    if (!token) {
+        const error = new Error("No Autorizado");
+        return res.status(401).json({ error: error.message });
     }
-  } catch (error) {
-    res.status(500).json({ error: "Token No Válido" })
-  }
 
-}
+    try {
+        // const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        // if (typeof decoded === "object" && decoded.id) {
+        //     const user = await User.findById(decoded.id).select(
+        //         "_id name email",
+        //     );
+        //     if (user) {
+        //         req.user = user;
+        //         next();
+        //     } else {
+        //         res.status(500).json({ error: "Token No Válido" });
+        //     }
+        // }
+
+        const decoded = jwt.verify(token, process.env.JWT_SECRET!);
+
+        if (typeof decoded === "object" && decoded.id) {
+            const user = await User.findById(decoded.id).select(
+                "_id name email",
+            );
+
+            if (!user) {
+                return res.status(401).json({ error: "Token inválido" });
+            }
+
+            req.user = user;
+
+            return next();
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Token No Válido" });
+    }
+};

@@ -1,16 +1,28 @@
-import nodemailer from "nodemailer"
-import dotenv from "dotenv"
-dotenv.config()
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+dotenv.config();
 
+// Configuracion si se va a utilizar el sandbox de Mailtrap
+// const config = () => {
+//     return {
+//         host: process.env.SMTP_HOST,
+//         port: +process.env.SMTP_PORT,
+//         auth: {
+//             user: process.env.SMTP_USER,
+//             pass: process.env.SMTP_PASS,
+//         },
+//     };
+// };
+
+// Configuracion si se va a utilizar gmail como receptor
 const config = () => {
-  return {
-    host: process.env.SMTP_HOST,
-    port: +process.env.SMTP_PORT,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS
-    }
-  }
-}
+    return {
+        service: "gmail",
+        auth: {
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS,
+        },
+    };
+};
 
-export const transporter = nodemailer.createTransport(config())
+export const transporter = nodemailer.createTransport(config());
