@@ -1,19 +1,16 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "lib": [
-      "esnext"
-    ],
-    "target": "ESNext",
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "strict": false,
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "declaration": true
-  },
-  "include": [
-    "src/**/*.ts"
-  ]
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "target": "ESNext",
+        "lib": ["esnext"],
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "types": ["node"],
+        "strict": false,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "declaration": true
+    },
+    "include": ["src/**/*.ts"]
 }
