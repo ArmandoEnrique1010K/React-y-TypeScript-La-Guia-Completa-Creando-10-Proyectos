@@ -147,7 +147,8 @@ export class AuthController {
             token.user = user.id;
 
             // enviar el email
-            AuthEmail.sendConfirmationEmail({
+            // Colocar un await
+            await AuthEmail.sendConfirmationEmail({
                 email: user.email,
                 name: user.name,
                 token: token.token,

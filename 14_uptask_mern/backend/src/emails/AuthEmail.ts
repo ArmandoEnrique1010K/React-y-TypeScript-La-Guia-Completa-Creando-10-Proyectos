@@ -11,7 +11,7 @@ export class AuthEmail {
     static sendConfirmationEmail = async (user: IEmail) => {
         try {
             const info = await transporter.sendMail({
-                from: "UpTask <admin@uptask.com>",
+                from: `"Uptask" <${process.env.EMAIL_USER}>`,
                 to: user.email,
                 subject: "UpTask - Confirma tu cuenta",
                 text: "UpTask - Confirma tu cuenta",
@@ -23,6 +23,7 @@ export class AuthEmail {
         <p>Este token expira en 10 minutos</p>
       `,
             });
+            console.log(info);
             console.log("Mensaje enviado", info.messageId);
         } catch (error) {
             console.error("Error real:", error);
