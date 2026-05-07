@@ -180,7 +180,8 @@ export class AuthController {
             await token.save();
 
             // enviar el email
-            AuthEmail.sendPasswordResetToken({
+            // Colocar un await
+            await AuthEmail.sendPasswordResetToken({
                 email: user.email,
                 name: user.name,
                 token: token.token,
