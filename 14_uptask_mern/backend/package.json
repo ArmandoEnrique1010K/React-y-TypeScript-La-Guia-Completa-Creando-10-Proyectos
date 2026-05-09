@@ -23,7 +23,7 @@
         "jsonwebtoken": "^9.0.2",
         "mongoose": "^8.18.0",
         "morgan": "^1.10.1",
-        "nodemailer": "^8.0.7",
+        "react": "^19.2.6",
         "resend": "^6.12.3"
     },
     "devDependencies": {
@@ -33,7 +33,7 @@
         "@types/jsonwebtoken": "^9.0.10",
         "@types/morgan": "^1.9.10",
         "@types/node": "^25.6.0",
-        "@types/nodemailer": "^7.0.1",
+        "@types/react": "^19.2.14",
         "nodemon": "^3.1.10",
         "prettier": "^3.8.3",
         "ts-node": "^10.9.2",
