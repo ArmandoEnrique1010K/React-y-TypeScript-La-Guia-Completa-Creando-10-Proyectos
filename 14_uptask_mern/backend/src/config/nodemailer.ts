@@ -21,7 +21,7 @@ const config = () => {
         host: "smtp.gmail.com",
         port: 465,
         secure: true,
-        family: 4, // fuerza IPv4
+        // family: 4, // fuerza IPv4
         auth: {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS,

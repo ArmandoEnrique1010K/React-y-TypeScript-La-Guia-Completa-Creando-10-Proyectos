@@ -32,8 +32,9 @@ export class AuthEmail {
 
     static sendPasswordResetToken = async (user: IEmail) => {
         try {
-            await transporter.verify();
-            console.log("SMTP READY");
+            // await transporter.verify();
+            // console.log("SMTP READY");
+            console.log("ANTES DE SENDMAIL");
 
             const info = await transporter.sendMail({
                 from: `"Uptask" <${process.env.EMAIL_USER}>`,
@@ -48,6 +49,8 @@ export class AuthEmail {
         <p>Este token expira en 10 minutos</p>
       `,
             });
+            console.log("DESPUES DE SENDMAIL");
+
             console.log(info);
             console.log("Mensaje enviado", info.messageId);
         } catch (error) {
