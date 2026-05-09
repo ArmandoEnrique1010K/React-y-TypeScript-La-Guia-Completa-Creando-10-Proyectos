@@ -36,7 +36,7 @@ export class AuthEmail {
             console.log("SMTP READY");
 
             const info = await transporter.sendMail({
-                from: "UpTask <admin@uptask.com>",
+                from: `"Uptask" <${process.env.EMAIL_USER}>`,
                 to: user.email,
                 subject: "UpTask - Reestablece tu password",
                 text: "UpTask - Reestablece tu password",
