@@ -1,25 +1,25 @@
-import { prisma } from "@/src/lib/prisma"
+import { prisma } from "@/src/lib/prisma";
 
-export const dynamic = "force-dynamic"
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   const orders = await prisma.order.findMany({
     take: 5,
     where: {
       orderReadyAt: {
-        not: null
-      }
+        not: null,
+      },
     },
     orderBy: {
-      orderReadyAt: "desc"
+      orderReadyAt: "desc",
     },
     include: {
       orderProducts: {
         include: {
-          product: true
-        }
-      }
-    }
-  })
-  return Response.json(orders)
-}   
+          product: true,
+        },
+      },
+    },
+  });
+  return Response.json(orders);
+}

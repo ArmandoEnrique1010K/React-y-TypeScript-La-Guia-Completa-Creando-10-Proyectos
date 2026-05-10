@@ -1,25 +1,27 @@
-"use client"
-import { getImagePath } from "@/src/utils"
-import { CldUploadWidget } from "next-cloudinary"
-import Image from "next/image"
-import { useState } from "react"
-import { TbPhotoPlus } from "react-icons/tb"
+"use client";
+import { getImagePath } from "@/src/utils";
+import { CldUploadWidget } from "next-cloudinary";
+import Image from "next/image";
+import { useState } from "react";
+import { TbPhotoPlus } from "react-icons/tb";
 
 export default function ImageUpload({ image }: { image: string | undefined }) {
-  const [imageUrl, setImageUrl] = useState("")
+  const [imageUrl, setImageUrl] = useState("");
 
   return (
     <CldUploadWidget
       onSuccess={(result, { widget }) => {
         if (result.event === "success") {
-          widget.close()
+          widget.close();
           // @ts-ignore
-          setImageUrl(result.info?.secure_url)
+          setImageUrl(result.info?.secure_url);
         }
       }}
-      uploadPreset="o4mi4jct"
+      uploadPreset="upload_preset_quiosco_next"
       options={{
-        maxFiles: 1
+        maxFiles: 1,
+        // Conviene agrupar en una carpeta
+        folder: "quiosco-next",
       }}
     >
       {({ open }) => (
@@ -30,15 +32,11 @@ export default function ImageUpload({ image }: { image: string | undefined }) {
               className="relative cursor-pointer hover:opacity-70 transition p-10 border-neutral-300 flex flex-col justify-center items-center gap-4 text-neutral-600 bg-slate-100 "
               onClick={() => open()}
             >
-              <TbPhotoPlus
-                size={50}
-              />
+              <TbPhotoPlus size={50} />
               <p className="text-lg font-semibold">Agregar Imagen</p>
 
               {imageUrl && (
-                <div
-                  className="absolute inset-0 w-full h-full"
-                >
+                <div className="absolute inset-0 w-full h-full">
                   <Image
                     fill
                     style={{ objectFit: "contain" }}
@@ -65,10 +63,10 @@ export default function ImageUpload({ image }: { image: string | undefined }) {
           <input
             type="hidden"
             name="image"
-            defaultValue={imageUrl ? imageUrl : image }
+            defaultValue={imageUrl ? imageUrl : image}
           />
         </>
       )}
     </CldUploadWidget>
-  )
+  );
 }
