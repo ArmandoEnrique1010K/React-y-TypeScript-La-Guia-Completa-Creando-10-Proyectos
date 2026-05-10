@@ -1,15 +1,15 @@
-"use server"
+"use server";
 
-import { prisma } from "@/src/lib/prisma"
-import { OrderSchema } from "@/src/schema"
+import { prisma } from "@/src/lib/prisma";
+import { OrderSchema } from "@/src/schema";
 
 export async function createOrder(data: unknown) {
-  const result = OrderSchema.safeParse(data)
+  const result = OrderSchema.safeParse(data);
 
   if (!result.success) {
     return {
-      errors: result.error.issues
-    }
+      errors: result.error.issues,
+    };
   }
 
   try {
@@ -18,14 +18,14 @@ export async function createOrder(data: unknown) {
         name: result.data.name,
         total: result.data.total,
         orderProducts: {
-          create: result.data.order.map(product => ({
+          create: result.data.order.map((product) => ({
             productId: product.id,
-            quantity: product.quantity
-          }))
-        }
-      }
-    })
+            quantity: product.quantity,
+          })),
+        },
+      },
+    });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
