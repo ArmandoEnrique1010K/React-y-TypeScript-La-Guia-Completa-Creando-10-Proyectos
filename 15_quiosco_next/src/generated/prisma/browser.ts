@@ -33,7 +33,7 @@ export type Product = Prisma.ProductModel
  */
 export type Order = Prisma.OrderModel
 /**
- * Model OrderProducts
+ * Model OrderProduct
  * 
  */
-export type OrderProducts = Prisma.OrderProductsModel
+export type OrderProduct = Prisma.OrderProductModel

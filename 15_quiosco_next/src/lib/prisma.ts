@@ -17,12 +17,20 @@
 import "dotenv/config";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../generated/prisma/client";
+import { Pool } from "pg";
 
 // Define un tipo para el objeto global
 const globalForPrisma = global as unknown as { prisma: PrismaClient };
 
 const connectionString = `${process.env.DATABASE_URL}`;
-const adapter = new PrismaPg({ connectionString });
+
+const pool = new Pool({
+  connectionString,
+});
+
+const adapter = new PrismaPg(pool);
+
+// const adapter = new PrismaPg({ connectionString });
 
 // Usa la instancia existente o crea una nueva
 export const prisma = globalForPrisma.prisma || new PrismaClient({ adapter });

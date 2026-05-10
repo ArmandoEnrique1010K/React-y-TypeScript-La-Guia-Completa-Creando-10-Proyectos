@@ -23,7 +23,7 @@ model Product {
   image String
   categoryId Int
   category Category @relation(fields: [categoryId], references: [id])
-  orderItems OrderProducts[]
+  orderItems OrderProduct[]
 }
 
 model Order {
@@ -33,10 +33,10 @@ model Order {
   date DateTime @default(now())
   status Boolean @default(false)
   orderReadyAt DateTime?
-  orderProducts OrderProducts[]
+  orderProducts OrderProduct[]
 }
 
-model OrderProducts {
+model OrderProduct {
   id Int @id @default(autoincrement())
   orderId Int
   order Order @relation(fields: [orderId], references: [id])
