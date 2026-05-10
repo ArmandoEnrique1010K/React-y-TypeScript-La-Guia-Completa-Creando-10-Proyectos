@@ -1,6 +1,4 @@
 import { OrderWithProducts } from "@/src/types";
-import { OrderProducts } from "../../src/generated/prisma/client";
-import { OrderSchema } from "../../src/schema/index";
 
 type LatestOrderItemProps = {
   order: OrderWithProducts;
