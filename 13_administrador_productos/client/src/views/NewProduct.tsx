@@ -42,7 +42,7 @@ export default function NewProduct() {
 
             {error && <ErrorMessage>{error}</ErrorMessage>}
 
-            <Form className="mt-10" method="POST">
+            <Form className="mt-10" method="POST" autoComplete="off">
                 <ProductForm />
                 <input
                     type="submit"

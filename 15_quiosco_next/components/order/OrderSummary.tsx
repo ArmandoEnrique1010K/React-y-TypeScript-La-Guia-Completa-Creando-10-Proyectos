@@ -56,7 +56,11 @@ export default function OrderSummary() {
             Total a pagar: {""}
             <span className="font-bold">{formatCurrency(total)}</span>
           </p>
-          <form className="w-full mt-10 space-y-5" action={handleCreateOrder}>
+          <form
+            className="w-full mt-10 space-y-5"
+            action={handleCreateOrder}
+            autoComplete="off"
+          >
             <input
               type="text"
               placeholder="Tu Nombre"

@@ -61,6 +61,7 @@ export default function PatientForm() {
                 className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
                 noValidate
                 onSubmit={handleSubmit(registerPatient)}
+                autoComplete="off"
             >
                 <div className="mb-5">
                     <label

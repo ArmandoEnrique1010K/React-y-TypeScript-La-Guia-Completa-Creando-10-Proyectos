@@ -71,6 +71,7 @@ export default function EditProjectForm({
                     className="mt-10 bg-white shadow-lg p-10 rounded-lg"
                     onSubmit={handleSubmit(handleForm)}
                     noValidate
+                    autoComplete="off"
                 >
                     <ProjectForm register={register} errors={errors} />
                     <input

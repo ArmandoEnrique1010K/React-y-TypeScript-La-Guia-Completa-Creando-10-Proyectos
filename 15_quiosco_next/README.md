@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quiosco con Nextjs, PostgreSQL, Prisma, Next Cloudinary, Zustand y Zod
 
-## Getting Started
+Autor: Juan Pablo De La Torre
 
-First, run the development server:
+Última actualización: Mayo del 2026
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[Proyecto desplegado en Vercel](https://quiosco-next-juan-pablo-de-la-torre.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variables de entorno
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`DATABASE_URL` = Se requiere una URL de conexión del sistema de gestión de bases de datos PostgreSQL. (ej: postgresql://usuario:password@localhost:5433/database)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`= Nombre del cloud asignado por Cloudinary para almacenar y gestionar imágenes.
 
-## Learn More
+`NEXT_PUBLIC_CLOUDINARY_API_KEY`= API Key pública proporcionada por Cloudinary para identificar la cuenta utilizada en la aplicación.
 
-To learn more about Next.js, take a look at the following resources:
+`CLOUDINARY_API_SECRET`= Clave privada utilizada para autenticar operaciones seguras con la API de Cloudinary.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Nota**: Las 3 variables de entorno relacionadas con Cloudinary deben mantener exactamente esos nombres, ya que son utilizadas internamente por Next Cloudinary según su documentación oficial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Cambios realizados
 
-## Deploy on Vercel
+- Actualización de Prisma ORM de la versión 6 a la versión 7, incluyendo cambios importantes en la configuración del cliente Prisma y en la integración con PostgreSQL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Actualización de Next.js 14 a Next.js 16, adaptando la estructura del proyecto a los nuevos cambios y mejoras introducidos en el framework.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Implementación de almacenamiento de imágenes utilizando Cloudinary mediante carpetas organizadas para una mejor gestión de recursos multimedia.
+
+## Advertencia
+
+- Para ejecutar el proyecto en modo desarrollo debes ejecutar los siguientes comandos en consola:
+  1. Instalar dependencias: `npm install`
+  2. Generar el cliente de Prisma: `npx prisma generate`
+  3. Ejecutar migraciones de Prisma: `npx prisma migrate dev`
+  4. Ejecutar el seed de Prisma para insertar datos iniciales en la base de datos: `npx prisma db seed`
+  5. Ejecutar el servidor de desarrollo: `npm run dev`
+
+- Si la base de datos está vacía y no ejecutas el seed de Prisma, la aplicación no mostrará productos ni categorías en el quiosco.
+
+- Ejecuta el comando `npx next build` crear la versión de producción de la aplicación, no inicia el servidor ni abre la app, pero sirve para detectar errores antes del deploy, para ejecutar la app compilada en modo de producción ejecuta `npx next start`.

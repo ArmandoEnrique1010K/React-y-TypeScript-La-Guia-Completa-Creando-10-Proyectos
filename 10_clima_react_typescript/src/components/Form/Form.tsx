@@ -34,7 +34,11 @@ export default function Form({ fetchWeather }: FormProps) {
     };
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form
+            className={styles.form}
+            onSubmit={handleSubmit}
+            autoComplete="off"
+        >
             {alert && <Alert>{alert}</Alert>}
             <div className={styles.field}>
                 <label htmlFor="city">Ciudad:</label>

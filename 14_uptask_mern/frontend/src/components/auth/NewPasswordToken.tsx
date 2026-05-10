@@ -35,7 +35,10 @@ export default function NewPasswordToken({
 
     return (
         <>
-            <form className="space-y-8 p-10 rounded-lg bg-white mt-10">
+            <form
+                className="space-y-8 p-10 rounded-lg bg-white mt-10"
+                autoComplete="off"
+            >
                 <label className="font-normal text-2xl text-center block">
                     Código de 6 dígitos
                 </label>

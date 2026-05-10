@@ -64,7 +64,7 @@ export default function EditProduct() {
 
             {error && <ErrorMessage>{error}</ErrorMessage>}
 
-            <Form className="mt-10" method="POST">
+            <Form className="mt-10" method="POST" autoComplete="off">
                 <ProductForm product={product} />
                 <div className="mb-4">
                     <label className="text-gray-800" htmlFor="availability">

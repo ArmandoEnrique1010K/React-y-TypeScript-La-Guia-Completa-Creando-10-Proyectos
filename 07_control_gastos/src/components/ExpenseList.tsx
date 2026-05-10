@@ -22,8 +22,12 @@ export default function ExpenseList() {
                 </p>
             ) : (
                 <>
-                    <p className="text-gray-600 text-2xl font-bold my-5">
-                        Listado de Gastos.
+                    <p className="text-gray-600 text-2xl font-bold ">
+                        Listado de Gastos
+                    </p>
+                    <p className="text-sm text-gray-400 my-5">
+                        Arrastre el elemento hacia la izquierda o derecha para
+                        actualizarlo o para eliminarlo.
                     </p>
                     {filteredExpenses.map((expense) => (
                         <ExpenseDetail key={expense.id} expense={expense} />

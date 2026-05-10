@@ -46,6 +46,7 @@ export default function AddNoteForm() {
             onSubmit={handleSubmit(handleAddNote)}
             className="space-y-3"
             noValidate
+            autoComplete="off"
         >
             <div className="mb-6 space-y-3 flex flex-col">
                 <label className="font-bold" htmlFor="content">

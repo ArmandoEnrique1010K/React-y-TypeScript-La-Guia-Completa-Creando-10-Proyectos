@@ -21,3 +21,8 @@
 .temperatures span {
     font-weight: 400;
 }
+@media screen and (max-width: 767px) {
+    .container {
+        margin-top: 40px;
+    }
+}

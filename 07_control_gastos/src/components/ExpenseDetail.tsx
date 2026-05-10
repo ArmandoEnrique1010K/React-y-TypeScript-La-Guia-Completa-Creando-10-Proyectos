@@ -63,7 +63,7 @@ export default function ExpenseDetail({ expense }: ExpenseDetailProps) {
             >
                 {/* select-none evita que el usuario pueda seleccionar texto */}
                 <div className="bg-white shadow-lg p-5 w-full border-b border-gray-200 flex gap-5 items-center cursor-grab select-none">
-                    <div>
+                    <div className="select-none ">
                         <img
                             src={`/icono_${categoryInfo.icon}.svg`}
                             alt="icono gasto"

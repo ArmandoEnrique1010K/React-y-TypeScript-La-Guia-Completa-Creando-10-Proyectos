@@ -104,6 +104,7 @@ export default function DeleteProjectModal() {
                                     className="mt-10 space-y-5"
                                     onSubmit={handleSubmit(handleForm)}
                                     noValidate
+                                    autoComplete="off"
                                 >
                                     <div className="mb-6 space-y-3 flex flex-col">
                                         <label

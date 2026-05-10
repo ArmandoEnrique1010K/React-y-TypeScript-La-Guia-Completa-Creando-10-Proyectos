@@ -39,6 +39,7 @@ export default function AddMemberForm() {
                 className="mt-10 space-y-5"
                 onSubmit={handleSubmit(handleSearchUser)}
                 noValidate
+                autoComplete="off"
             >
                 <div className="mb-6 space-y-5 flex flex-col">
                     <label className="font-normal text-2xl" htmlFor="name">

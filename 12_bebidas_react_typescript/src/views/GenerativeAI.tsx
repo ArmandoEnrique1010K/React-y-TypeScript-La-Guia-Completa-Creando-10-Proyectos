@@ -34,18 +34,19 @@ export default function GenerativeAI() {
                 <form
                     onSubmit={handleSubmit}
                     className="flex flex-col space-y-3 py-10"
+                    autoComplete="off"
                 >
                     <div className="relative">
                         <input
                             name="prompt"
                             id="prompt"
-                            className="border bg-white p-4 rounded-lg w-full border-slate-800"
+                            className="border bg-white p-4 rounded-lg w-full border-slate-800 pr-20"
                             placeholder="Genera una receta con ingredientes. Ej. Bebida con Tequila y Fresa"
                         />
                         <button
                             type="submit"
                             aria-label="Enviar"
-                            className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2 ${
+                            className={`cursor-pointer absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 ${
                                 isGenerating
                                     ? "cursor-not-allowed opacity-50"
                                     : ""

@@ -112,6 +112,7 @@ export default function AddTaskModal() {
                                             handleCreateTask,
                                         )}
                                         noValidate
+                                        autoComplete="off"
                                     >
                                         <TaskForm
                                             register={register}

@@ -52,6 +52,7 @@ export default function RegisterView() {
                 onSubmit={handleSubmit(handleRegister)}
                 className="space-y-8 p-10  bg-white mt-10"
                 noValidate
+                autoComplete="off"
             >
                 <div className="flex flex-col gap-5">
                     <label className="font-normal text-2xl" htmlFor="email">

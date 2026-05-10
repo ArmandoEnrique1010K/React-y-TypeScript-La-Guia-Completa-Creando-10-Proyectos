@@ -28,9 +28,6 @@ export const api = axios.create({
 api.interceptors.response.use(
     (response) => response,
     (error) => {
-        if (error.response?.status === 401) {
-            // Todo: redirigir a login, limpiar estado, etc.
-        }
         return Promise.reject(error);
     },
 );

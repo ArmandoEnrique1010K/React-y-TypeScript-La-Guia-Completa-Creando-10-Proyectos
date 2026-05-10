@@ -52,6 +52,7 @@ export default function Form() {
         <form
             className="space-y-5 bg-white shadow p-10 rounded-lg"
             onSubmit={handleSubmit}
+            autoComplete="off"
         >
             <div className="grid grid-cols-1 gap-3">
                 <label htmlFor="category" className="font-bold">

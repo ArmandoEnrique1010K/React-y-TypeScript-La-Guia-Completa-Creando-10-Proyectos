@@ -41,6 +41,7 @@ export default function ChangePasswordView() {
                     onSubmit={handleSubmit(handleChangePassword)}
                     className=" mt-14 space-y-5 bg-white shadow-lg p-10 rounded-lg"
                     noValidate
+                    autoComplete="off"
                 >
                     <div className="mb-6 space-y-3 flex flex-col">
                         <label

@@ -107,6 +107,7 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                                     className="mt-10 space-y-3"
                                     onSubmit={handleSubmit(handleEditTask)}
                                     noValidate
+                                    autoComplete="off"
                                 >
                                     <TaskForm
                                         register={register}
