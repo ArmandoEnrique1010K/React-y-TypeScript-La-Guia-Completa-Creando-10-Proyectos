@@ -4,8 +4,7 @@ Autor: Juan Pablo De La Torre
 
 Última actualización: Mayo del 2026
 
-[Proyecto desplegado en Vercel (Debe mostrar un "Internal Server Error" en la vista del usuario)
-](https://mern-uptask-juan-pablo-de-la-torre.vercel.app/)
+[Proyecto desplegado en Vercel](https://mern-uptask-juan-pablo-de-la-torre.vercel.app/)
 
 ## Variables de entorno
 
