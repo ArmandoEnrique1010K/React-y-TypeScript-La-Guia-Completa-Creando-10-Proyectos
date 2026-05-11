@@ -1,4 +1,12 @@
-import { DndContext, DragEndEvent } from "@dnd-kit/core";
+import {
+    DndContext,
+    DragEndEvent,
+    KeyboardSensor,
+    MouseSensor,
+    TouchSensor,
+    useSensor,
+    useSensors,
+} from "@dnd-kit/core";
 import { Project, TaskProject, TaskStatus } from "@/types/index";
 import TaskCard from "./TaskCard";
 import { statusTranslations } from "@/locales/es";
@@ -48,6 +56,13 @@ export default function TaskList({ tasks, canEdit }: TaskListProps) {
         },
     });
 
+    // El uso de sensores en dispositivos moviles
+    const sensors = useSensors(
+        useSensor(MouseSensor),
+        useSensor(TouchSensor),
+        useSensor(KeyboardSensor),
+    );
+
     const groupedTasks = tasks.reduce((acc, task) => {
         let currentGroup = acc[task.status] ? [...acc[task.status]] : [];
         currentGroup = [...currentGroup, task];
@@ -89,7 +104,7 @@ export default function TaskList({ tasks, canEdit }: TaskListProps) {
             <h2 className="text-5xl font-black my-10">Tareas</h2>
 
             <div className="flex gap-5 overflow-x-scroll 2xl:overflow-auto pb-32">
-                <DndContext onDragEnd={handleDragEnd}>
+                <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
                     {Object.entries(groupedTasks).map(([status, tasks]) => (
                         <div
                             key={status}

@@ -9,7 +9,7 @@ export default function NewPasswordView() {
 
     return (
         <>
-            <h1 className="text-5xl font-black text-white">
+            <h1 className="text-4xl sm:text-5xl font-black text-white">
                 Reestablecer Password
             </h1>
             <p className="text-2xl font-light text-white mt-5">

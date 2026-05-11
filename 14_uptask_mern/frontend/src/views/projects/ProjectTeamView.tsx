@@ -41,10 +41,10 @@ export default function ProjectTeamView() {
                 <p className="text-2xl font-light text-gray-500 mt-5">
                     Administra el equipo de trabajo para este proyecto
                 </p>
-                <nav className="my-5 flex gap-3">
+                <nav className="my-5 flex gap-3 flex-col sm:flex-row">
                     <button
                         type="button"
-                        className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+                        className="flex bg-purple-400 hover:bg-purple-500 justify-center px-10 py-3 w-56 sm:w-auto text-white text-xl font-bold cursor-pointer transition-colors"
                         onClick={() =>
                             navigate(location.pathname + "?addMember=true")
                         }
@@ -53,7 +53,7 @@ export default function ProjectTeamView() {
                     </button>
                     <Link
                         to={`/projects/${projectId}`}
-                        className="bg-fuchsia-600 hover:bg-fuchsia-700 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+                        className="flex text-center bg-fuchsia-600 hover:bg-fuchsia-700 justify-center px-10 py-3 w-56 sm:w-auto text-white text-xl font-bold cursor-pointer transition-colors"
                     >
                         Volver a Proyecto
                     </Link>

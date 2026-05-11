@@ -4,7 +4,11 @@ Autor: Juan Pablo De La Torre
 
 Última actualización: Mayo del 2026
 
-[Proyecto desplegado en Vercel](https://quiosco-next-juan-pablo-de-la-torre.vercel.app/)
+Proyecto desplegado en Vercel, contiene 3 vistas:
+
+[Menú del quiosco](https://quiosco-next-juan-pablo-de-la-torre.vercel.app/order/cafe)
+[Panel de administrador](https://quiosco-next-juan-pablo-de-la-torre.vercel.app/admin/orders)
+[Ordenes a entregar](https://quiosco-next-juan-pablo-de-la-torre.vercel.app/orders)
 
 ## Variables de entorno
 
@@ -29,11 +33,11 @@ Autor: Juan Pablo De La Torre
 ## Advertencia
 
 - Para ejecutar el proyecto en modo desarrollo debes ejecutar los siguientes comandos en consola:
-  1. Instalar dependencias: `npm install`
-  2. Generar el cliente de Prisma: `npx prisma generate`
-  3. Ejecutar migraciones de Prisma: `npx prisma migrate dev`
-  4. Ejecutar el seed de Prisma para insertar datos iniciales en la base de datos: `npx prisma db seed`
-  5. Ejecutar el servidor de desarrollo: `npm run dev`
+    1. Instalar dependencias: `npm install`
+    2. Generar el cliente de Prisma: `npx prisma generate`
+    3. Ejecutar migraciones de Prisma: `npx prisma migrate dev`
+    4. Ejecutar el seed de Prisma para insertar datos iniciales en la base de datos: `npx prisma db seed`
+    5. Ejecutar el servidor de desarrollo: `npm run dev`
 
 - Si la base de datos está vacía y no ejecutas el seed de Prisma, la aplicación no mostrará productos ni categorías en el quiosco.
 

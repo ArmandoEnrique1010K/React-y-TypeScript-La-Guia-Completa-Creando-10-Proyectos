@@ -31,10 +31,10 @@ export default function ProjectDetailsView() {
                     {data.description}
                 </p>
                 {isManager(data.manager, user._id) && (
-                    <nav className="my-5 flex gap-3">
+                    <nav className="my-5 flex gap-3 flex-col sm:flex-row">
                         <button
                             type="button"
-                            className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+                            className="flex bg-purple-400 hover:bg-purple-500 justify-center px-10 py-3 w-56 sm:w-auto text-white text-xl font-bold cursor-pointer transition-colors"
                             onClick={() =>
                                 navigate(location.pathname + "?newTask=true")
                             }
@@ -43,7 +43,7 @@ export default function ProjectDetailsView() {
                         </button>
                         <Link
                             to={"team"}
-                            className="bg-fuchsia-600 hover:bg-fuchsia-700 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+                            className="flex bg-fuchsia-600 hover:bg-fuchsia-700 justify-center px-10 py-3 w-56 sm:w-auto text-white text-xl font-bold cursor-pointer transition-colors"
                         >
                             Colaboradores
                         </Link>

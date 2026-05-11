@@ -48,7 +48,7 @@ export default function CreateProjectView() {
                     </Link>
                 </nav>
                 <form
-                    className="mt-10 bg-white shadow-lg p-10 rounded-lg"
+                    className="mt-10 bg-white shadow-lg sm:p-10 p-5 rounded-lg"
                     onSubmit={handleSubmit(handleForm)}
                     noValidate
                     autoComplete="off"
