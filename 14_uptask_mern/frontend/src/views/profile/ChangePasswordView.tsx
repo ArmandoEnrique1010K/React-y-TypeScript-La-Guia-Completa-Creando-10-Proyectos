@@ -39,7 +39,7 @@ export default function ChangePasswordView() {
 
                 <form
                     onSubmit={handleSubmit(handleChangePassword)}
-                    className=" mt-14 space-y-5 bg-white shadow-lg p-10 rounded-lg"
+                    className="sm:mt-14 mt-8 space-y-5 bg-white shadow-lg sm:p-10 p-5 rounded-lg"
                     noValidate
                     autoComplete="off"
                 >

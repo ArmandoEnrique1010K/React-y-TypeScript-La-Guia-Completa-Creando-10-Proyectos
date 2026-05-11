@@ -38,7 +38,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
 
                 <form
                     onSubmit={handleSubmit(handleEditProfile)}
-                    className=" mt-14 space-y-5  bg-white shadow-lg p-10 rounded-l"
+                    className="sm:mt-14 mt-8 space-y-5 bg-white shadow-lg sm:p-10 p-5 rounded-lg"
                     noValidate
                     autoComplete="off"
                 >

@@ -50,7 +50,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
         <>
             <form
                 onSubmit={handleSubmit(handleNewPassword)}
-                className="space-y-8 p-10  bg-white mt-10"
+                className="space-y-8 sm:p-10 p-5 bg-white mt-10"
                 noValidate
                 autoComplete="off"
             >

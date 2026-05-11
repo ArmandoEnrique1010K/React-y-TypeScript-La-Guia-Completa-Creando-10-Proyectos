@@ -88,7 +88,7 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                            <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all sm:p-16 p-5">
                                 <DialogTitle
                                     as="h3"
                                     className="font-black text-4xl  my-5"

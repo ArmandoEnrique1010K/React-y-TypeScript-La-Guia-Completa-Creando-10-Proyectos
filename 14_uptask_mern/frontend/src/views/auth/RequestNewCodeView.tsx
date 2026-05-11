@@ -32,7 +32,7 @@ export default function RegisterView() {
 
     return (
         <>
-            <h1 className="text-5xl font-black text-white">
+            <h1 className="text-4xl sm:text-5xl font-black text-white">
                 Solicitar Código de Confirmación
             </h1>
             <p className="text-2xl font-light text-white mt-5">
@@ -45,7 +45,7 @@ export default function RegisterView() {
 
             <form
                 onSubmit={handleSubmit(handleRequestCode)}
-                className="space-y-8 p-10 rounded-lg bg-white mt-10"
+                className="space-y-8 sm:p-10 p-5 rounded-lg bg-white mt-10"
                 noValidate
                 autoComplete="off"
             >

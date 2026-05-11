@@ -24,36 +24,38 @@ export default function Products() {
 
     return (
         <>
-            <div className="flex justify-between">
-                <h2 className="text-4xl font-black text-slate-500">
+            <div className="flex justify-between items-center gap-4">
+                <h2 className="text-3xl sm:text-4xl font-black text-slate-500">
                     Productos
                 </h2>
                 <Link
                     to="productos/nuevo"
-                    className="rounded-md bg-indigo-600 p-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-500"
+                    className="rounded-md bg-indigo-600 p-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-500 text-center"
                 >
                     Agregar Producto
                 </Link>
             </div>
             <div className="p-2">
-                <table className="w-full mt-5 table-auto">
-                    <thead className="bg-slate-800 text-white">
-                        <tr>
-                            <th className="p-2">Producto</th>
-                            <th className="p-2">Precio</th>
-                            <th className="p-2">Disponibilidad</th>
-                            <th className="p-2">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {data?.map((product) => (
-                            <ProductDetails
-                                key={product.id}
-                                product={product}
-                            />
-                        ))}
-                    </tbody>
-                </table>
+                <div className="w-full overflow-x-auto">
+                    <table className="w-full mt-5 table-auto">
+                        <thead className="bg-slate-800 text-white">
+                            <tr>
+                                <th className="p-2">Producto</th>
+                                <th className="p-2">Precio</th>
+                                <th className="p-2">Disponibilidad</th>
+                                <th className="p-2">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {data?.map((product) => (
+                                <ProductDetails
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </>
     );

@@ -1,19 +1,19 @@
-import { prisma } from "@/src/lib/prisma"
+import { prisma } from "@/src/lib/prisma";
 
-export const dynamic = "force-dynamic"
+export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const orders = await prisma.order.findMany({
-    where: {
-      status: false
-    },
-    include: {
-      orderProducts: {
+    const orders = await prisma.order.findMany({
+        where: {
+            status: false,
+        },
         include: {
-          product: true
-        }
-      }
-    }
-  })
-  return Response.json(orders)
+            orderProducts: {
+                include: {
+                    product: true,
+                },
+            },
+        },
+    });
+    return Response.json(orders);
 }
